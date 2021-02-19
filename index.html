@@ -10,33 +10,68 @@
     <script src="https://kit.fontawesome.com/7d4a87edd3.js" crossorigin="anonymous"></script>
 </head>
 
+
 <body>
     <nav class="navbar navbar-light bg-light navbar-expand-sm">
         <!-- ^ 'navbar-expand-sm' makes navbar more responsive. 'fixed-top' is all it takes to stick somehting to the top of the website. -->
         <a href="/" class="navbar-brand">Whiskey Drop</a>
         <!-- ^ 'navbar-brand' just adds some sensible styling to the link. -->
-        <ul class="navbar-nav mr-auto">
-            <!-- ^ mr-auto pushes navbar to the left. -->
-            <li class="active nav-item mr-2"><a href="/" class="nav-link">Home</a></li>
-            <li class=" nav-item mr-2"><a href="/about" class="nav-link">About</a></li>
-            <li class=" nav-item mr-2 d-block d-sm-none"><a href="/login" class="nav-link">Sign In / Sign Up</a></li>
-            <!-- ^ Displays a link on smaller devices only that we have a cleaner version of on larger ones. *NOTE that he uses sm here.* -->
-        </ul>
+
+
+        <!-- BELOW IS IMPORTANT JS code for your Milestone project!! -->
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- ^ data-toggle tells Bootstrap that this button will be used as a trigger for a collapsible element somewhere on the page. data-target gives the id. -->
+            <span class="navbar-toggler-icon"></span></button>
+        <!-- ^ Provides the three bar icon for our button -->
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+            <ul class="navbar-nav mr-auto">
+                <!-- ^ mr-auto pushes navbar to the left. -->
+                <li class="active nav-item mr-2"><a href="/" class="nav-link">Home</a></li>
+                <li class=" nav-item mr-2"><a href="/about" class="nav-link">About</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Whiskeys</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Irish</a>
+                        <a class="dropdown-item" href="#">Scotch</a>
+                        <a class="dropdown-item" href="#">Japanese</a>
+                        <a class="dropdown-item" href="#">American</a>
+                        <a class="dropdown-item" href="#">Unknown Origin</a>
+                    </div>
+                    <!-- ^ IMPORTANT: This is a great bit of code for having a dropdown menu. The fact that it's nested in a collapsable navbar is gerat too. -->
+                </li>
+                <li class=" nav-item mr-2 d-block d-sm-none">
+                    <a href="/login" class="nav-link">Sign In / Sign Up</a>
+                </li>
+                <!-- ^ Displays a link on smaller devices only that we have a cleaner version of on larger ones. *NOTE that he uses sm here.* -->
+            </ul>
+        </div>
+
+
         <div class="d-none d-sm-block">
             <!-- ^ Hides the code on smaller devices as it's jank. *THIS was originally md but I changed it to mirror above.*  -->
             <p class="navbar-text my-auto mr-2"><i>Great whiskey delivered to your door!</i></p>
             <a href="/login">Sign In / Sign Up</a>
         </div>
+
     </nav>
+
+
     <article class="container mt-3">
         <!-- ^ 'mt-3' adds some spacing between the navbar and the jumbotron. -->
         <div class="row d-none d-sm-block">
             <div class="col-12">
                 <div class="alert alert-warning">
-                    <strong>Sale Now On!</strong> We've got a sale on. Get a 12-month subscription for the price of 6! <a href="#">See here for details!</a>
+                    <strong>Sale Now On!</strong> We've got a sale on. Get a 12-month subscription for the price of 6!
+                    <a href="#">See here for details!</a>
                 </div>
             </div>
         </div>
+
+
         <!-- Callout -->
         <div class="row">
             <div class="col-12">
@@ -52,7 +87,8 @@
                         <strong><mark>First one is free!</mark></strong>
 
                     </p>
-                    <button class="btn btn-success btn-lg">Sign up!</button>
+                    <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#signUpModal">Sign
+                        up!</button>
                     <p class="text-muted">
                         <small>You must be over 18 to sign up to our service. Please, drink responsibly.</small>
                     </p>
@@ -62,6 +98,8 @@
         <!-- /.callout -->
         <hr>
 
+
+
         <!-- Quotes -->
         <section class="quotes">
             <div class="row">
@@ -70,12 +108,15 @@
                     <h2 class="text-uppercase">Quotes:</h2>
                 </div>
             </div>
+
             <div class="row">
+
                 <div class="col-12 col-md-6">
                     <div class="media">
                         <div class="d-none d-sm-block">
                             <!-- ^ NOTE: If you want to create a div with multiple classes the shorthand should contain no spaces e.g .d-none.d-sm-block + TAB -->
-                            <img src="images/girl-image.png" alt="image of a pretty hipster" class="rounded-circle mr-3" height="100" width="100">
+                            <img src="images/girl-image.png" alt="image of a pretty hipster" class="rounded-circle mr-3"
+                                height="100" width="100">
                             <!-- ^ rounded-circle is a pretty cool and self-explanatory feature. -->
                         </div>
                         <div class="media-body">
@@ -88,10 +129,12 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12 col-md-6">
                     <div class="media">
                         <div class="d-none d-sm-block">
-                            <img src="images/guy-image.png" alt="image of a hipster in sunglasses" class="rounded-circle mr-3" height="100" width="100">
+                            <img src="images/guy-image.png" alt="image of a hipster in sunglasses"
+                                class="rounded-circle mr-3" height="100" width="100">
                         </div>
                         <div class="media-body">
                             <blockquote class="blockquote">
@@ -101,10 +144,12 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
         <!-- /.quotes -->
         <hr>
+
 
         <!-- Features -->
         <section class="features">
@@ -113,10 +158,12 @@
                     <h2 class="text-uppercase">Features:</h2>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="feature">
-                        <h3><i class="fas fa-gift d-none d-sm-inline"></i> Feature 1 <span class="badge badge-success">NEW!</span></h3>
+                        <h3><i class="fas fa-gift d-none d-sm-inline"></i> Feature 1 <span
+                                class="badge badge-success">NEW!</span></h3>
                         <!-- ^ The above span adds a green badge for a new feature. Personally I would make this redbut perhaps our colours will change later on. -->
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore
@@ -125,6 +172,7 @@
                         <p><a class="btn btn-sm btn-default" href="">Read More</a></p>
                     </div>
                 </div>
+
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="feature">
                         <h3><i class="fas fa-credit-card d-none d-sm-inline"></i> Feature 2</h3>
@@ -135,6 +183,7 @@
                         <p><a class="btn btn-sm btn-default" href="">Read More</a></p>
                     </div>
                 </div>
+
                 <div class="col-12 d-md-none d-lg-block col-lg-4">
                     <!-- ^ The 'd-md-none' hides Feature 3 on larger screens. The 'd' here stands for display. -->
                     <div class="feature">
@@ -163,6 +212,7 @@
                         <!-- the 'scope' atteibute has no visual effects but can be uised by screenreaders. -->
                     </tr>
                 </thead>
+
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
@@ -194,9 +244,52 @@
         </section>
         <!-- /.monthly-favourites -->
     </article>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <div class="modal" tabindex="-1" role="dialog" id="signUpModal">
+        <!-- ^ The above id is used further up to tell the browser what modal to open. -->
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up To Whiskey Drop!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>   
+                        <div class="form-group">
+                            <label for="repeatPassword">Repeat Password</label>
+                            <input type="password" class="form-control" id="repeatPassword" placeholder="Repeat Password">
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <!-- ^ Is placed at the bottom of the html document so that any large JavaScript files don't slow the loading of the page. -->
 </body>
 
