@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Whiskey Drop | Taste a new whiskey every month</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light navbar-expand-sm">
+        <!-- ^ 'navbar-expand-sm' makes navbar more responsive. 'fixed-top' is all it takes to stick somehting to the top of the website. -->
+        <a href="/" class="navbar-brand">Whiskey Drop</a>
+        <!-- ^ 'navbar-brand' just adds some sensible styling to the link. -->
+        <ul class="navbar-nav mr-auto">
+            <!-- ^ mr-auto pushes navbar to the left. -->
+            <li class="active nav-item mr-2"><a href="/" class="nav-link">Home</a></li>
+            <li class=" nav-item mr-2"><a href="/about" class="nav-link">About</a></li>
+            <li class=" nav-item mr-2 d-block d-sm-none"><a href="/login" class="nav-link">Sign In / Sign Up</a></li>
+            <!-- ^ Displays a link on smaller devices only that we have a cleaner version of on larger ones. *NOTE that he uses sm here.* -->
+        </ul>
+        <div class="d-none d-sm-block">
+            <!-- ^ Hides the code on smaller devices as it's jank. *THIS was originally md but I changed it to mirror above.*  -->
+            <p class="navbar-text my-auto mr-2"><i>Great whiskey delivered to your door!</i></p>
+            <a href="/login">Sign In / Sign Up</a>
+        </div>
+    </nav>
+    <article class="container mt-3">
+        <!-- ^ 'mt-3' adds some spacing between the navbar and the jumbotron. -->
+        <!-- Callout -->
+        <div class="row">
+            <div class="col-12">
+                <!-- ^ A column class must be the direct child of a row class, otherwise it will break the responsive design. -->
+                <section class="callout jumbotron text-center">
+                    <!-- 'jumbotron' makes an element stand out. -->
+                    <h1>The finest whiskeys delivered to your doorstep.</h1>
+                    <p class="lead">Sign up today to start receiving the world's best whiskeys every month.
+                        <s class="d-none d-sm-inline">€19.99</s>
+                        <!-- ^ 'd-none d-sm-inline' Hides the price on mobile. -->
+                        <span class="d-inline d-sm-none"><br></span>
+                        <!-- Ensures highlighted text is always on it's own line. -->
+                        <strong><mark>First one is free!</mark></strong>
+
+                    </p>
+                    <button class="btn btn-success btn-lg">Sign up!</button>
+                    <p class="text-muted">
+                        <small>You must be over 18 to sign up to our service. Please, drink responsibly.</small>
+                    </p>
+                </section>
+            </div>
+        </div>
+        <!-- /.callout -->
+        <hr>
+
+        <!-- Quotes -->
+        <section class="quotes">
+            <div class="row">
+                <div class="col-12 my-5">
+                    <!-- ^ 'my-5' addds some serious vertical spacing. -->
+                    <h2 class="text-uppercase">Quotes:</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <blockquote class="blockquote">
+                        <p>I've been introduced to more than 10 great international whiskeys I never knew about.</p>
+                        <p>- Jane Doe</p>
+                    </blockquote>
+                </div>
+                <div class="col-12 col-md-6">
+                    <blockquote class="blockquote">
+                        <p>I haven't been sober for months!</p>
+                        <p>- Jane Doe</p>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <!-- /.quotes -->
+        <hr>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="row">
+                <div class="col-12 my-5">
+                    <h2 class="text-uppercase">Features:</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="feature">
+                        <h3>Feature 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p><a class="btn btn-sm btn-default" href="">Read More</a></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="feature">
+                        <h3>Feature 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p><a class="btn btn-sm btn-default" href="">Read More</a></p>
+                    </div>
+                </div>
+                <div class="col-12 d-md-none d-lg-block col-lg-4">
+                    <!-- ^ The 'd-md-none' hides Feature 3 on larger screens. The 'd' here standsd for display. -->
+                    <div class="feature">
+                        <h3>Feature 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p><a class="btn btn-sm btn-default" href="">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /.features -->
+        <hr>
+
+        <!-- Monthly favourites -->
+        <section class="monthly-favourites">
+            <h2 class="text-uppercase my-5">Our Monthly Favourites</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Origin</th>
+                        <!-- the 'scope' atteibute has no visual effects but can be uised by screenreaders. -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Jameson</td>
+                        <td>Ireland</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Glenfiddich</td>
+                        <td>Scotland</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Hibiki</td>
+                        <td>Japan</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Jack Daniels</td>
+                        <td>United States of America</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Spirit of Louisiana</td>
+                        <td>Origin Unknown??</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- /.monthly-favourites -->
+    </article>
+</body>
+
+</html>
