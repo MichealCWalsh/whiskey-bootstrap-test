@@ -2,9 +2,15 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-.alert-contianer{
+.container-wrapper{
 
 }
+
+.container-wrapper--red{
+    background-color: #f05f40;
+    color: white;
+}
+
 .callout-container{
     height: 100vh;
     /* ^ Sets the callout to 100% of broswer viewport height. */
@@ -47,22 +53,102 @@ body{
 
 }
 
+/* Page Headers */
+
+.page-header{
+    margin-bottom: 0;
+    border-bottom: 0;
+    text-align: center;
+}
+
+.page-header h2{
+    margin-top: 0;
+}
+
+.quotes .page-header{
+    margin-bottom: 25px;
+}
+
 /* Block Dividers */
 
 .block-divider{
     width: 75px;
     height: 5px;
     border: 0;
-    background-color: #8e362a;
+    background-color: #444;
 }
 
 .block-divider--orange{
     background-color: #f05f40;
 }
 
+.block-divider--white{
+    background-color: white;
+}
+
 .block-divider--short{
     width: 35px;
 }
+
+/* Alert */
+
+.alert-contianer .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.site-wide-alert{
+    z-index: 1;
+    /* ^ WTF I had to give this a z-index property but he didn't in the video no idea why!!!????????? */
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 5px 15px;
+    background-color: #eec802;
+    border-color: #eec802;
+
+}
+
+/* Content containers */
+
+.content-container{
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+/* Navbar */
+
+.navalert-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+.navbar{
+    margin-bottom: 0;
+    border: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    /* ^ Without the z-index the navbar would be hidden behind other elements. */
+}
+
+.navbar .navbar-toggler{
+    border: 0;
+}
+
+.navbar-brand{
+    font-weight: bold;
+}
+
+.navbar .navbar-nav a{
+    font-weight: bold;
+}
+/* ^ This is what he does in the video but I do not understand why he doesn't just target the .nav-link class?????? */
+
+
 
 /* Jumbotron */
 
@@ -106,8 +192,48 @@ body{
 .btn--red:active,
 .btn--red:focus,
 .btn--red:active:focus{
-    background-color: #f05f40;
-    border-color: #f05f40;
+    background-color: #a02424;
+    border-color: #a02424;
 }
 
-/* ^ Brain is brokoen rn but go back and figure out button hover controls in google dev tools! */
+/* ^
+    Brain is brokoen rn but go back and figure out button hover controls in google dev tools!
+    Ok, figured it out. In the 'Styles' tab above the css in dev there's a :hov filter you have to click.
+*/
+
+a:hover{
+    color: white;
+}
+
+/* ^ This is a very odd line of code that I had to put in to override the bootstrap default blue hover text. */
+
+
+/* ^ WHY DOES THIS NOT WORK!!?? */
+
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* ^ More bizarre code I had to add but he didn't. Think something has fucked up somewhere but whatever. */
+
+.feature{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.feature i{
+    margin-bottom: 20px;
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.feature .btn{
+    background-color: white;
+    border-color: white;
+    border-radius: 15px;
+    min-width: 100px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #f05f40;
+}
