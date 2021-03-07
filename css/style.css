@@ -2,9 +2,9 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-.container-wrapper{
+/* .container-wrapper{
 
-}
+} */
 
 .container-wrapper--red{
     background-color: #f05f40;
@@ -41,7 +41,7 @@ body{
 }
 /* ^ This code is cool it lets make an image more transparent so that it doesn't interfere with text or other elements. */
 
-.features-container{
+/* .features-container{
 
 }
 
@@ -51,7 +51,7 @@ body{
 
 .monthly-favourites-container{
 
-}
+} */
 
 /* Page Headers */
 
